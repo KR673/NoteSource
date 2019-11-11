@@ -58,7 +58,7 @@ hexo.extend.filter.register('after_post_render', data => {
     });
     console.log(elements.length > 0)
     if (elements.length > 0) {
-      data.excerpt = _$.html().replace(/<\/?.+?>/g, "");;
+      data.excerpt = _$.html().replace(/<\/?.+?>/g, "") + "...";
       data.more = $.html();
       data.content = data.excerpt + '<a id="more"></a>' + data.more;
     } else {
