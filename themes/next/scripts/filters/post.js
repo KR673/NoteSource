@@ -3,6 +3,7 @@
 'use strict';
 
 hexo.extend.filter.register('after_post_render', data => {
+  const imgs = data.cover
   const { config } = hexo;
   const theme = hexo.theme.config;
   const filters = {
@@ -45,27 +46,23 @@ hexo.extend.filter.register('after_post_render', data => {
       });
     });
   }
+
   if (filters.excerpt) {
-    const elements = $.root().children();
-    const _$ = cheerio.load('', {
-      decodeEntities: false
-    });
-    var length = 0;
-    elements.each((i, o) => {
-      if (length > theme.auto_excerpt.length) return;
-      length += $(o).text().length;
-      _$.root().append($(o).remove());
-    });
-    console.log(elements.length > 0)
-    if (elements.length > 0) {
-      data.excerpt = _$.html().replace(/<\/?.+?>/g, "") + "...";
-      data.more = $.html();
-      data.content = data.excerpt + '<a id="more"></a>' + data.more;
-    } else {
-      data.excerpt = '';
-      data.content = _$.html();
-      data.more = data.content;
+    
+    var img = "";
+
+    if(imgs){
+      console.log(imgs)
+      img = "<img src='" + imgs + "'/>"
+      console.log(img)
     }
+
+    var excerpt = img + $.html().replace(/<\/?.+?>/g, "").substring(0, theme.auto_excerpt.length) + "..."
+
+    data.excerpt = excerpt;
+    data.more = $.html();
+    data.content = data.more;
+
   } else {
     data.content = $.html();
   }
