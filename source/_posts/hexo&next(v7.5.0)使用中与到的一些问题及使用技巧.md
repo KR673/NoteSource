@@ -46,3 +46,6 @@ tags:
 设置config中的 `creative_commons`, post 改为 true
 ![](https://mynoteimg.oss-cn-beijing.aliyuncs.com/20191113105946.png)
 
+### 2.3 添加gitalk评论
+
+<https://segmentfault.com/a/1190000014085547>
