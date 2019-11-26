@@ -6,12 +6,19 @@ tags: java
 
 [toc]
 
-> 可以使用 自定义注解 + 反射来实现
+> 可以使用 自定义注解 + 反射来实现, 这样可以为不同的字段添加不同的注解以分类判断
 
 ## 1. 自定义注解
 
 ```java
+/**
+ * 字段、枚举的常量
+ */
 @Target(ElementType.FIELD)
+
+/**
+ * 注解会在class字节码文件中存在，在运行时可以通过反射获取到
+ */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TypeOne {
 }
@@ -39,7 +46,10 @@ public static boolean fieldIncludeNull(Object trueParam, Class<? extends Annotat
     Field[] declaredFields = trueParam.getClass().getDeclaredFields();
     for (Field fields : declaredFields) {
         fields.setAccessible(true);
+
+        // 判断字段是否有对应注解
         if(fields.getAnnotation(anno) != null) {
+            // 判断字段值是否为null
             if(Objects.equals(fields.get(trueParam), null)) {
                 return true;
             }
