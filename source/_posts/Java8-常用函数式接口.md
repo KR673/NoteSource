@@ -13,7 +13,7 @@ tags: java
 
 `java.util.function.Predicate<T>`接口定义了一个名叫test的抽象方法，它**接受泛型T对象**，并**返回一个boolean**, 适合于需要根据多种不同的判断条件获取不同值的情况
 
-```
+```java
 public static <T> void judgeString(String param,Predicate<T> judge){
     if(judge.test(param)){
         System.out.print(param)
@@ -31,7 +31,7 @@ judgeString("aa", t -> Ojbects.equals(t , "aa"))
 
 `java.util.function.Function<T, R>`接口定义了一个叫作apply的方法，它接受一个 泛型T的对象，并返回一个泛型R的对象. 。如果你需要定义一个Lambda，将输入对象的信息映射到输出，就可以使用这个接口
 
-```
+```java
 Class Uses{
     private Strng name;
     private Integer age;
