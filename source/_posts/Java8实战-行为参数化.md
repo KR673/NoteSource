@@ -1,5 +1,5 @@
 ---
-title: Java8-行为参数化
+title: Java8实战-行为参数化
 date: 2019-12-20 00:48:27
 tags: java
 ---
