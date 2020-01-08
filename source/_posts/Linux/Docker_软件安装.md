@@ -1,11 +1,13 @@
 ---
 title: Docker_软件安装
+tags:
+  - docker
+  - linux
+  - tomcat
+  - nginx
+categories:
+  - Linux
 date: 2019-12-26 23:03:05
-tags: 
-    - docker
-    - linux
-    - tomcat
-    - nginx
 ---
 
 [toc]

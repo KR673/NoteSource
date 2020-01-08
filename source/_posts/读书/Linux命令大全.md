@@ -1,5 +1,7 @@
 ---
 title: Linux命令大全
+categories:
+  - 读书
 date: 2019-12-30 01:46:48
 tags:
 ---

@@ -1,7 +1,9 @@
 ---
 title: Java8实战-常用函数式接口
-date: 2019-12-20 01:16:23
 tags: java
+categories:
+  - Java
+date: 2019-12-20 01:16:23
 ---
 
 [toc]

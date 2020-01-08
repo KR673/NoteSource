@@ -1,7 +1,9 @@
 ---
 title: Java8实战-行为参数化
-date: 2019-12-20 00:48:27
 tags: java
+categories:
+  - Java
+date: 2019-12-20 00:48:27
 ---
 [toc]
 

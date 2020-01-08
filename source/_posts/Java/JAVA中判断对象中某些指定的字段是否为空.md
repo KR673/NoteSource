@@ -1,7 +1,9 @@
 ---
 title: JAVA中判断对象中某些指定的字段是否为空
-date: 2019-11-26 23:47:01
 tags: java
+categories:
+  - Java
+date: 2019-11-26 23:47:01
 ---
 
 [toc]
