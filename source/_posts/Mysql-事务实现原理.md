@@ -1,5 +1,5 @@
 ---
-title: Mysql-事务实现原理
+title: MySQL-事务实现原理
 date: 2020-01-08 23:56:28
 tags: mysql
 ---
@@ -75,3 +75,8 @@ InnoDB 为每个事务都构造了一个数组，用来保存在这个事务启�
 ### 3.3 串行化
 
 “串行化”隔离级别下直接用加锁的方式来避免并行访问
+
+
+## 参考:
+
+1. [MySQL实战45讲](https://time.geekbang.org/column/article/68963?code=4WJqZ1Li-NcKqeoaSUYtndaTkiX07wVYoGc8y9Fh9z8%3D)
